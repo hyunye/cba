@@ -1,6 +1,7 @@
-function a(baka: string) {
-  const sus = 1
-  return baka + sus
-}
+import { javascript } from "@codemirror/lang-javascript";
+import { EditorView } from "@codemirror/view";
 
-console.log(a)
+let view = new EditorView({
+  extensions: [javascript()],
+  parent: document.body
+})
