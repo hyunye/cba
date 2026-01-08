@@ -1,7 +1,11 @@
+import { EditorView, basicSetup } from "codemirror"
 import { javascript } from "@codemirror/lang-javascript";
-import { EditorView } from "@codemirror/view";
 
-let view = new EditorView({
-  extensions: [javascript()],
-  parent: document.body
+const container = document.querySelector('.nextInner')!
+const div = document.createElement('div')
+container.prepend(div)
+
+const view = new EditorView({
+  extensions: [basicSetup, javascript()],
+  parent: div
 })
