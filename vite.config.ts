@@ -10,6 +10,7 @@ export default defineConfig({
     dts({ include: ['src'] })
   ],
   build: {
+    minify: "esbuild",
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       fileName: () => `cba.js`,
